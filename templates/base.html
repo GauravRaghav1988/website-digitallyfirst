@@ -18,7 +18,11 @@
     {% endblock title %}
   </title>
 </head>
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <a class="navbar-brand" href="/account/">Your Account</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -32,7 +36,7 @@
             <a class="nav-link" href="/about/">About Me <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item active">
-            <a class="nav-link" href="/login/">Login <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="/sign_in/">SignIn <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item active">
             <a class="nav-link" href="/registration/">Registration <span class="sr-only">(current)</span></a>
@@ -40,6 +44,7 @@
           <li class="nav-item active">
             <a class="nav-link" href="/blog/">Blog <span class="sr-only">(current)</span></a>
           </li>
+          
           <li class="nav-item active">
             <a class="nav-link" href="/weather/">Weather Update <span class="sr-only">(current)</span></a>
           </li>
