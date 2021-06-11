@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+
+{% block title %}
+  reset
+{% endblock title %}
+
+{% block body %}
+<body>
+
+ <h1>It's Gaurav Raghav (Website Owner)</h1>
+ 
+ <button onclick="typeWriter()">Click here to Read About Me</button>
+ 
+ <p id="demo"></p>
+ 
+ <script>
+ var i = 0;
+ var txt = 'Hello Visitors ..! Myself Gaurav Raghav from India residing in Gurugram(Haryana) near to capital of India(Delhi). I am an Engineer with certification and experienced in Web Development and Digital Marketing for about 8 plus years and I love my work and I hope same with you. and ofcourse the image below is not mine';
+ var speed = 50;
+ 
+ function typeWriter() {
+   if (i < txt.length) {
+     document.getElementById("demo").innerHTML += txt.charAt(i);
+     i++;
+     setTimeout(typeWriter, speed);
+   }
+ }
+ </script>
+ <img src="https://source.unsplash.com/600x400/?men" class="img-fluid" alt="">
+ 
+ </body>
+{% endblock body %}
+  
