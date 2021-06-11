@@ -1,19 +1,25 @@
 
+from django.http.response import HttpResponse
 from django.shortcuts import redirect, render
 # import json to load json data to python dictionary
 import json
 # urllib.request to make a request to api
 import urllib.request
 
+
 def weather(request):
+    
     if request.method == 'POST':
-        city = request.POST['city']
-  
+        city = request.POST.get('city')
+        if city=="":
+            return redirect("/weather/")
+
         # source contain JSON data from API
-  
+    
         source = urllib.request.urlopen('http://api.openweathermap.org/data/2.5/weather?q='+city+'&APPID=6c9d151653b1b990d22313b234195113').read()
 
          # converting JSON data to a dictionary
+        #import pdb; pdb.set_trace()
         list_of_data = json.loads(source)
   
         # data for variable list_of_data
